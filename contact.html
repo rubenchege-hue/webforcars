@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Elton Cars Kenya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav>
+      <a href="index.html" class="logo">ELTON CARS</a>
+      <div class="nav-links">
+        <a href="inventory.html">Inventory</a>
+        <a href="services.html">Services</a>
+        <a href="financing.html">Financing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <a href="index.html" class="back-link">&larr; Back to Home</a>
+      <h1>Get In Touch</h1>
+      <p>Visit our showroom, give us a call, or send a message. We're here to help you find your perfect drive.</p>
+    </section>
+
+    <section class="page-content">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Visit Our Showroom</h3>
+          <p>Mombasa Road, Next to Sameer Business Park</p>
+          <p>Nairobi, Kenya</p>
+
+          <span class="label">Hours</span>
+          <p>Monday — Saturday: 8:00 AM – 6:00 PM</p>
+          <p>Sunday: 10:00 AM – 4:00 PM</p>
+          <p>Public Holidays: 10:00 AM – 3:00 PM</p>
+
+          <span class="label">Phone</span>
+          <p>+254 700 123 456</p>
+          <p>+254 733 789 012</p>
+
+          <span class="label">Email</span>
+          <p>info@eltoncars.co.ke</p>
+          <p>sales@eltoncars.co.ke</p>
+        </div>
+
+        <div class="contact-form">
+          <form onsubmit="event.preventDefault(); alert('Thank you. We will get back to you shortly.');">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone">
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us what you're looking for..." required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

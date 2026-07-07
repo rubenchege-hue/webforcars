@@ -1,0 +1,323 @@
+/* ─── Sub-page styles ─── */
+
+.page {
+  min-height: 100vh;
+  background: var(--bg-dark);
+  padding-top: 6rem;
+}
+
+.page-hero {
+  padding: 4rem 8vw 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  color: var(--text-on-dark);
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.page-hero p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.page-content {
+  padding: 3rem 8vw 6rem;
+  max-width: 1200px;
+}
+
+/* ─── Inventory Grid ─── */
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.car-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.car-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.car-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: #1a1a1a;
+}
+
+.car-card-body {
+  padding: 1.5rem;
+}
+
+.car-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text-on-dark);
+  margin-bottom: 0.25rem;
+  font-weight: 400;
+}
+
+.car-card-body .car-tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.car-card-body .car-specs {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0.75rem 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.car-card-body .car-price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-top: 0.75rem;
+}
+
+.car-card-body .car-price span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+
+/* ─── Services List ─── */
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  padding: 2rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: border-color 0.3s ease;
+}
+
+.service-item:hover {
+  border-color: var(--accent);
+}
+
+.service-item .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.service-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text-on-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.service-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ─── Financing ─── */
+.finance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.finance-card {
+  padding: 2rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.finance-card:hover {
+  border-color: var(--accent);
+}
+
+.finance-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text-on-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.finance-card .rate {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin: 1rem 0;
+}
+
+.finance-card .rate span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+
+.finance-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.finance-note {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 1.5rem 2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.finance-note strong {
+  color: var(--accent);
+}
+
+/* ─── Contact ─── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text-on-dark);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 0.25rem;
+}
+
+.contact-info .label {
+  color: var(--accent);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-on-dark);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 0.9rem 2.5rem;
+  background: var(--accent);
+  color: var(--bg-dark);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: var(--accent-dim);
+}
+
+/* ─── Back link ─── */
+.back-link {
+  display: inline-block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 2rem 5vw;
+  }
+  .page-content {
+    padding: 2rem 5vw 4rem;
+  }
+  .inventory-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+  .finance-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
