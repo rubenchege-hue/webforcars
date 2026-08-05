@@ -1,0 +1,7 @@
+*.mp4
+*.mov
+*.avi
+.DS_Store
+._*
+skill/
+.vercel
