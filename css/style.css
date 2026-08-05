@@ -30,6 +30,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ─── Loader ─── */
@@ -113,6 +114,15 @@ body {
 .nav-links {
   display: flex;
   gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-burger {
+  display: none;
 }
 
 .nav-links a {
@@ -136,6 +146,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -216,6 +227,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   z-index: 5;
   background: var(--bg-dark);
 }
@@ -447,11 +459,60 @@ body {
   }
 
   .nav-links {
-    display: none;
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    background: var(--bg-accent);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    z-index: 150;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    padding: 0.75rem 1rem;
+    color: var(--text-on-dark);
+  }
+
+  .nav-burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    padding: 6px 0;
+  }
+
+  .nav-burger span {
+    width: 26px;
+    height: 2px;
+    background: var(--text-on-dark);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-toggle:checked ~ .nav-burger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle:checked ~ .nav-burger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked ~ .nav-burger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .site-header {
-    padding: 1rem 4vw;
+    padding: calc(1rem + env(safe-area-inset-top, 0px)) 4vw;
   }
 
   .marquee-text {
@@ -464,5 +525,32 @@ body {
 
   .hero-heading {
     font-size: clamp(2.5rem, 15vw, 4rem);
+  }
+
+  .hero-content {
+    padding: 0 6vw;
+  }
+
+  .hero-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+  }
+
+  .scroll-indicator {
+    bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .section-inner {
+    padding: 1.25rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .loader-brand {
+    font-size: 1.5rem;
   }
 }

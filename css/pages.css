@@ -2,6 +2,7 @@
 
 .page {
   min-height: 100vh;
+  min-height: 100dvh;
   background: var(--bg-dark);
   padding-top: 6rem;
 }
@@ -302,8 +303,14 @@
 
 /* ─── Mobile ─── */
 @media (max-width: 768px) {
+  .page {
+    padding-top: 5rem;
+  }
   .page-hero {
     padding: 2rem 5vw;
+  }
+  .page-hero h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
   }
   .page-content {
     padding: 2rem 5vw 4rem;
@@ -319,5 +326,36 @@
   }
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .contact-info,
+  .contact-form {
+    padding: 0 0.5rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .contact-form button {
+    width: 100%;
+    padding: 1rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .back-link {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+  }
+  .car-card-body {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-hero h1 {
+    font-size: clamp(1.75rem, 8.5vw, 2.5rem);
+  }
+  .page-hero p {
+    font-size: 0.9rem;
   }
 }

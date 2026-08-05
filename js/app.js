@@ -29,9 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let dpr = Math.min(window.devicePixelRatio || 1, 2);
   let cw, ch;
 
+  function viewportHeight() {
+    return (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+  }
+
   function resizeCanvas() {
     cw = window.innerWidth;
-    ch = window.innerHeight;
+    ch = viewportHeight();
     canvas.width = cw * dpr;
     canvas.height = ch * dpr;
     canvas.style.width = cw + "px";
@@ -414,6 +418,13 @@ document.addEventListener("DOMContentLoaded", () => {
     resizeCanvas();
     ScrollTrigger.refresh();
   });
+
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", () => {
+      resizeCanvas();
+      ScrollTrigger.refresh();
+    });
+  }
 
   // ─── Initialize all ───
   resizeCanvas();

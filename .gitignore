@@ -1,8 +1,10 @@
 node_modules/
 .DS_Store
+._*
 *.log
 .env
 skill/
 *.mp4
 *.mov
 *.avi
+.vercel
